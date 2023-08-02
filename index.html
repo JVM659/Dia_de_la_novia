@@ -1,0 +1,99 @@
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<title>Nuestra historia ♡</title>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<style type="text/css">
+		@font-face {
+			font-family: digit;
+			src: url('digital-7_mono.ttf') format("truetype");
+		}
+	</style>
+	<link href="css/default.css" type="text/css" rel="stylesheet">
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/garden.js"></script>
+    <script type="text/javascript" src="js/functions.js"></script>
+</head>
+
+<body>
+	<div id="mainDiv">
+		<div id="content">
+			<div id="code">
+				<span class="comments">/**</span><br />
+				<span class="space"/><span class="comments">* Les quiero contar una pequeña historia,</span><br />
+				<span class="space"/><span class="comments">* Así que decidi construir esto para que cualquiera sepa lo que diré.</span><br />
+				<span class="space"/><span class="comments">*/</span><br />
+				Karla Paola Lopez Carmona y Josué Valles Muñoz<br />
+				<span class="comments">// Enero 22, 11:35 pm. Esa fue la fecha en el que la vida nos entrelazó. </span><br />
+				i.love(u);<br />
+				<span class="comments">// Desde ese dia, hemos estado juntos ^_^.</span><br />
+				u.accepted();<br />
+				<span class="comments">// Desde aquel instante, no dejo de pensar en ti.</span><br />
+				i.miss(u);<br />
+				<span class="comments">// Y a pesar de la adversidad, seguiré amandote.</span><br />
+				i.takeCareOf(u);<br />
+				<span class="comments">// Sabiamos que no iba a ser facil.</span><br />
+				<span class="comments">// Aun asi, espero que el centener de millas que nos separan se vuelvan una nada.</span><br />
+				<span class="comments">// Te amo, y te lo quiero hacer saber este dia tan especial  </span><br />
+				<span class="keyword">while</span> (isHesitate) {<br />
+				<span class="placeholder"/>i.waitFor(u);<br />
+				<span class="placeholder"/><span class="comments">// En este dia y en los que vienen te quiero hacer saber lo mucho que te amo</span><br />
+				<span class="placeholder"/><span class="comments">// Así que piensa lo que te diré.</span><br />
+				<span class="placeholder"/>isHesitate = u.thinkOver();<br />
+				}<br />
+				<span class="comments">// A partir de ese dia y apartir de este momento te diré una cosa.</span><br />
+				<span class="comments">// Quiero pasar todo el tiempo que me resta de aliento a tu lado, ¿aceptas?  </span><br />
+				i.accept(u);<br />
+				i.liveHappilyWith(u);<br />
+			</div>
+			<div id="loveHeart">
+				<canvas id="garden"></canvas>
+				<div id="words">
+					<div id="messages">
+						Karla, te amare hasta que el reloj de este lenguaje deje de medir el tiempo ♡ 
+						<div id="elapseClock"></div>
+					</div>
+					<div id="loveu">
+						Te amo, hoy, mañana y siempre.<br/>
+						<div class="signature">- Josué</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+	</div>
+	<script type="text/javascript">
+		var offsetX = $("#loveHeart").width() / 2;
+		var offsetY = $("#loveHeart").height() / 2 - 55;
+		var together = new Date();
+		together.setFullYear(2010, 10, 2);
+		together.setHours(20);
+		together.setMinutes(0);
+		together.setSeconds(0);
+		together.setMilliseconds(0);
+		
+		if (!document.createElement('canvas').getContext) {
+			var msg = document.createElement("div");
+			msg.id = "errorMsg";
+			msg.innerHTML = "Your browser doesn't support HTML5!<br/>Recommend use Chrome 14+/IE 9+/Firefox 7+/Safari 4+"; 
+			document.body.appendChild(msg);
+			$("#code").css("display", "none")
+			$("#copyright").css("position", "absolute");
+			$("#copyright").css("bottom", "10px");
+		    document.execCommand("stop");
+		} else {
+			setTimeout(function () {
+				startHeartAnimation();
+			}, 5000);
+
+			timeElapse(together);
+			setInterval(function () {
+				timeElapse(together);
+			}, 500);
+
+			adjustCodePosition();
+			$("#code").typewriter();
+		}
+	</script>
+</body>
+</html>
